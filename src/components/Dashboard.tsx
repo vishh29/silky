@@ -44,14 +44,7 @@ const Dashboard = () => {
         <BasicBarChart />
         <BasicLineChart />
       </div>
-      <div
-        style={{
-          position: "relative",
-          width: "500px",
-          height: "500px",
-          overflow: "hidden",
-        }}
-      >
+      <div style={{ overflow: "hidden" }}>
         <Map />
       </div>
     </Box>
