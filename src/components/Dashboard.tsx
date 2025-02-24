@@ -1,4 +1,4 @@
-import { Grid, Box } from "@mui/material";
+import { Grid2, Box } from "@mui/material";
 import {
   Camera,
   LocationOn,
@@ -31,20 +31,40 @@ const Dashboard = () => {
   ];
 
   return (
-    <Box sx={{ padding: 3, marginLeft: 1 }}>
-      <Grid container spacing={15}>
+    <Box>
+      <Grid2 container spacing={10}>
         {data.map((item, index) => (
-          <Grid item key={index}>
+          <Grid2 key={index}>
             <CardComponent {...item} />
-          </Grid>
+          </Grid2>
         ))}
-      </Grid>
+      </Grid2>
       <ANPRTable />
-      <div style={{ display: "flex" }}>
+      <div
+        id="charts"
+        style={{
+          display: "flex",
+          flexGrow: "1",
+          width: "100%",
+          flexWrap: "wrap",
+          marginTop: 30,
+          gap: 40,
+        }}
+      >
         <BasicBarChart />
         <BasicLineChart />
       </div>
       <div style={{ overflow: "hidden" }}>
+        <h3
+          style={{
+            textAlign: "center",
+            color: "#2196F3",
+            margin: 0,
+            marginTop: 30,
+          }}
+        >
+          Camera Locations
+        </h3>
         <Map />
       </div>
     </Box>

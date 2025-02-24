@@ -13,7 +13,7 @@ const Map = () => {
       center={[latitude, longitude]}
       zoom={4}
       ref={mapRef}
-      style={{ height: "500px", width: "100vw" }}
+      style={{ height: "500px", width: "100%" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
